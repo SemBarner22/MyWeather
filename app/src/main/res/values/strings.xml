@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyWeather</string>
+    <string name="night_color">Night Color</string>
+    <string name="day_color">Day Color</string>
+</resources>

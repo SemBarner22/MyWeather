@@ -16,7 +16,7 @@
         app:titleMarginStart="50dp"
         app:title="Weather"
         app:subtitle="For a week ahead"
-        android:background="#4CAF50" />
+        android:background="@color/colorAccent" />
 
 
     <!--    <Toolbar-->
@@ -309,7 +309,7 @@
         app:hideOnScroll="true"
         android:layout_height="100dp"
         android:layout_width="match_parent"
-        android:background="#4CAF50"
+        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="BottomAppBar" />
 

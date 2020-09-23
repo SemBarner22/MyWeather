@@ -20,21 +20,21 @@
 
 
     <!--    <Toolbar-->
-<!--        android:id="@+id/my_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:elevation="4dp"-->
-<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+    <!--        android:id="@+id/my_toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        android:background="?attr/colorPrimary"-->
+    <!--        android:elevation="4dp"-->
+    <!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+    <!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
 
-<!--    <Toolbar-->
-<!--        android:id="@+id/my_toolbar"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:title="Weather" />-->
+    <!--    <Toolbar-->
+    <!--        android:id="@+id/my_toolbar"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:title="Weather" />-->
 
     <Switch
         android:layout_width="50dp"
@@ -49,22 +49,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--    <ImageView-->
-<!--        android:id="@+id/left"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:foreground="@drawable/ic_launcher_foreground"-->
-<!--        android:background="@drawable/ic_launcher_background"-->
-<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.4"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/right"-->
-<!--        app:layout_constraintVertical_chainStyle="packed"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/mainImage" />-->
+    <!--        android:id="@+id/left"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:foreground="@drawable/ic_launcher_foreground"-->
+    <!--        android:background="@drawable/ic_launcher_background"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.4"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/right"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/mainImage" />-->
 
     <ImageView
         android:id="@+id/mainImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:background="@color/colorAccent"
         android:foreground="@drawable/wind"
         android:text="Hello World!"
@@ -75,16 +75,28 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <TextView
-        android:background="@color/colorAccent"
-        android:text="Wind"
         android:id="@+id/mainText"
-        android:layout_width="150dp"
+        android:background="@color/colorAccent"
+        android:text="30"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@id/mainText1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainImage" />
+
+    <TextView
+        android:id="@+id/mainText1"
+        android:background="@color/colorAccent"
+        android:text="Wednesday"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintBottom_toTopOf="@id/space1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainImage" />
+        app:layout_constraintTop_toBottomOf="@id/mainText" />
 
     <TextView
         android:id="@+id/space1"
@@ -107,12 +119,23 @@
         android:id="@+id/leftText"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:text="28"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintEnd_toStartOf="@id/rightText"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/left" />
+
+    <TextView
+        android:id="@+id/leftText1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@id/rightText1"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leftText" />
 
     <ImageView
         android:id="@+id/right"
@@ -130,10 +153,21 @@
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_chainStyle="spread"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
+        android:text="28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/leftText"
         app:layout_constraintTop_toBottomOf="@id/right" />
+
+    <TextView
+        android:id="@+id/rightText1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:background="@color/colorAccent"
+        android:text="Friday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftText1"
+        app:layout_constraintTop_toBottomOf="@id/rightText" />
 
     <TextView
         android:id="@+id/space"
@@ -159,17 +193,29 @@
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
+        android:text="25"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image1"
         app:layout_constraintEnd_toStartOf="@id/image2Text"/>
+
+    <TextView
+        android:id="@+id/image1Text1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Saturday"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image1Text"
+        app:layout_constraintEnd_toStartOf="@id/image2Text1"/>
 
     <ImageView
         android:id="@+id/image2"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:background="@color/colorAccent"
+        android:text="25"
         android:foreground="@drawable/snowy"
         app:layout_constraintStart_toEndOf="@id/image1"
         app:layout_constraintEnd_toStartOf="@id/image3"
@@ -179,12 +225,23 @@
         android:id="@+id/image2Text"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
+        android:text="25"
         app:layout_constraintHorizontal_chainStyle="spread"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
         app:layout_constraintStart_toEndOf="@id/image1Text"
         app:layout_constraintTop_toBottomOf="@id/image1"
         app:layout_constraintEnd_toStartOf="@id/image3Text"/>
+
+    <TextView
+        android:id="@+id/image2Text1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:text="Sunday"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@id/image1Text1"
+        app:layout_constraintTop_toBottomOf="@id/image2Text"
+        app:layout_constraintEnd_toStartOf="@id/image3Text1"/>
 
     <ImageView
         android:id="@+id/image3"
@@ -202,9 +259,19 @@
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
+        android:text="25"
         app:layout_constraintStart_toEndOf="@id/image2Text"
         app:layout_constraintTop_toBottomOf="@id/image1"
+        app:layout_constraintEnd_toStartOf="@id/image4Text"/>
+
+    <TextView
+        android:id="@+id/image3Text1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Monday"
+        app:layout_constraintStart_toEndOf="@id/image2Text1"
+        app:layout_constraintTop_toBottomOf="@id/image3Text"
         app:layout_constraintEnd_toStartOf="@id/image4Text"/>
 
     <ImageView
@@ -222,9 +289,19 @@
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="@string/app_name"
+        android:text="25"
         app:layout_constraintStart_toEndOf="@id/image3Text"
         app:layout_constraintTop_toBottomOf="@id/image1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/image4Text1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Tuesday"
+        app:layout_constraintStart_toEndOf="@id/image3Text1"
+        app:layout_constraintTop_toBottomOf="@id/image4Text"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <View
@@ -252,6 +329,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:foreground="@drawable/upload"
+        android:background="@color/colorWhite"
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="@id/bottomView"
         app:layout_constraintTop_toTopOf="@id/bottomView"

@@ -177,7 +177,9 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image1Text"
-        app:layout_constraintEnd_toStartOf="@id/image2Text1"/>
+        app:layout_constraintEnd_toStartOf="@id/image2Text1"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <ImageView
         android:id="@+id/image2"
@@ -210,7 +212,9 @@
         android:background="@color/colorAccent"
         app:layout_constraintStart_toEndOf="@id/image1Text1"
         app:layout_constraintTop_toBottomOf="@id/image2Text"
-        app:layout_constraintEnd_toStartOf="@id/image3Text1"/>
+        app:layout_constraintEnd_toStartOf="@id/image3Text1"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <ImageView
         android:id="@+id/image3"
@@ -241,7 +245,9 @@
         android:text="Monday"
         app:layout_constraintStart_toEndOf="@id/image2Text1"
         app:layout_constraintTop_toBottomOf="@id/image3Text"
-        app:layout_constraintEnd_toStartOf="@id/image4Text"/>
+        app:layout_constraintEnd_toStartOf="@id/image4Text"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <ImageView
         android:id="@+id/image4"
@@ -271,7 +277,9 @@
         android:text="Tuesday"
         app:layout_constraintStart_toEndOf="@id/image3Text1"
         app:layout_constraintTop_toBottomOf="@id/image4Text"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <View
         android:id="@+id/bottomView"

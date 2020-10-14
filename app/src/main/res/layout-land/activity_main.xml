@@ -197,18 +197,6 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/image1"-->
 <!--        app:layout_constraintEnd_toStartOf="@id/image2Text"/>-->
 
-    <ImageView
-        android:id="@+id/image2"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintBottom_toTopOf="@id/image2Text"
-        app:layout_constraintEnd_toStartOf="@id/image3"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/space2" />
-
-
     <TextView
         android:id="@+id/image2Text"
         android:layout_width="75dp"
@@ -217,9 +205,10 @@
         android:text="28"
         app:layout_constraintEnd_toStartOf="@id/image3Text"
         app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/image2"
-        app:layout_constraintBottom_toTopOf="@id/image2Text1"/>
+        app:layout_constraintTop_toBottomOf="@id/image2"/>
+<!--        app:layout_constraintBottom_toTopOf="@id/image2Text1"/>-->
 
     <TextView
         android:id="@+id/image2Text1"
@@ -229,6 +218,7 @@
         android:text="Sunday"
         app:layout_constraintEnd_toStartOf="@id/image3Text1"
         app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toEndOf="@id/space1"
         app:layout_constraintTop_toBottomOf="@id/image2Text"
         app:layout_constraintBottom_toTopOf="@id/bottomView" />
@@ -252,6 +242,7 @@
         android:text="Monday"
         app:layout_constraintEnd_toStartOf="@id/image4Text1"
         app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toEndOf="@id/image2Text1"
         app:layout_constraintTop_toBottomOf="@id/image3Text"
         app:layout_constraintBottom_toTopOf="@id/bottomView"/>
@@ -268,7 +259,7 @@
         app:layout_constraintTop_toBottomOf="@id/space2" />
 
 
-<!--    <TextView-->
+    <!--    <TextView-->
 <!--        android:id="@+id/image3Text"-->
 <!--        android:layout_width="75dp"-->
 <!--        android:layout_height="wrap_content"-->
@@ -278,17 +269,29 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/image1"-->
 <!--        app:layout_constraintEnd_toStartOf="@id/image4Text"/>-->
 
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@color/colorAccent"
+        android:foreground="@drawable/snowy"
+        app:layout_constraintBottom_toTopOf="@id/image2Text"
+        app:layout_constraintEnd_toStartOf="@id/image3"
+        app:layout_constraintStart_toEndOf="@id/space1"
+        app:layout_constraintTop_toBottomOf="@id/space2" />
+
     <TextView
         android:id="@+id/image4Text"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="28"
-        app:layout_constraintBottom_toTopOf="@id/image4Text1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/image3Text"
         app:layout_constraintTop_toBottomOf="@id/image4" />
+<!--        app:layout_constraintBottom_toTopOf="@id/image4Text1"-->
+
 
     <TextView
         android:id="@+id/image4Text1"
@@ -300,7 +303,8 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/image3Text1"
         app:layout_constraintTop_toBottomOf="@id/image4Text"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"/>
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintVertical_bias="0"/>
 
     <ImageView
         android:id="@+id/image4"

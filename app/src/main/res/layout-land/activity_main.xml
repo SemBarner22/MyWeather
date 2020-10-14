@@ -18,6 +18,7 @@
         app:subtitle="For a week ahead"
         android:background="@color/colorAccent" />
 
+
     <Switch
         android:layout_width="50dp"
         android:layout_height="50dp"

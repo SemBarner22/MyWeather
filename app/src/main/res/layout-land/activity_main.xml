@@ -106,7 +106,7 @@
 
     <ImageView
         android:id="@+id/left"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="75dp"
         android:background="@color/colorAccent"
         android:foreground="@drawable/humidity"
@@ -118,7 +118,7 @@
 
     <TextView
         android:id="@+id/rightText"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="25"
@@ -129,7 +129,7 @@
 
     <TextView
         android:id="@+id/rightText1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Friday"
@@ -153,7 +153,7 @@
 
     <TextView
         android:id="@+id/image1Text1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Saturday"
@@ -177,7 +177,7 @@
 
     <ImageView
         android:id="@+id/image1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="75dp"
         app:layout_constraintHorizontal_chainStyle="spread"
         android:background="@color/colorAccent"
@@ -200,7 +200,7 @@
 
     <TextView
         android:id="@+id/image2Text"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="28"
@@ -213,7 +213,7 @@
 
     <TextView
         android:id="@+id/image2Text1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Sunday"
@@ -226,7 +226,7 @@
 
     <TextView
         android:id="@+id/image3Text"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="28"
@@ -237,7 +237,7 @@
 
     <TextView
         android:id="@+id/image3Text1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Monday"
@@ -250,7 +250,7 @@
 
     <ImageView
         android:id="@+id/image3"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="75dp"
         android:background="@color/colorAccent"
         android:foreground="@drawable/snowy"
@@ -272,7 +272,7 @@
 
     <ImageView
         android:id="@+id/image2"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="75dp"
         android:background="@color/colorAccent"
         android:foreground="@drawable/snowy"
@@ -296,7 +296,7 @@
 
     <TextView
         android:id="@+id/image4Text1"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Tuesday"
@@ -309,7 +309,7 @@
 
     <ImageView
         android:id="@+id/image4"
-        android:layout_width="75dp"
+        style="@style/FormButton"
         android:layout_height="75dp"
         android:background="@color/colorAccent"
         android:foreground="@drawable/snowy"
@@ -329,8 +329,7 @@
 
     <ImageButton
         android:id="@+id/bottomImage1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        style="@style/SmallButton"
         android:foreground="@drawable/house"
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="@id/bottomView"
@@ -340,8 +339,7 @@
 
     <ImageButton
         android:id="@+id/bottomImage2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        style="@style/SmallButton"
         android:foreground="@drawable/upload"
         android:background="@color/colorWhite"
         app:layout_constraintVertical_bias="0.3"
@@ -352,8 +350,7 @@
 
     <ImageButton
         android:id="@+id/bottomImage3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        style="@style/SmallButton"
         android:foreground="@drawable/place"
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="@id/bottomView"
@@ -364,8 +361,7 @@
 
     <ImageButton
         android:id="@+id/bottomImage4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        style="@style/SmallButton"
         android:foreground="@drawable/settings"
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="@id/bottomView"

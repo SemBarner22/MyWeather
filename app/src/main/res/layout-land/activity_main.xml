@@ -33,9 +33,7 @@
 
     <ImageView
         android:id="@+id/mainImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@color/colorAccent"
+        style="@style/ExtraLargeImageView"
         android:foreground="@drawable/wind"
         android:text="Hello World!"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,9 +45,7 @@
 
     <TextView
         android:id="@+id/mainText"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/ExtraLargeTextView"
         android:text="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
@@ -58,9 +54,7 @@
 
     <TextView
         android:id="@+id/mainText1"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/ExtraLargeTextView"
         android:text="Wednesday"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
@@ -75,9 +69,7 @@
 
     <TextView
         android:id="@+id/leftText"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="25"
         app:layout_constraintEnd_toStartOf="@id/right"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -87,9 +79,7 @@
 
     <TextView
         android:id="@+id/leftText1"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Thursday"
         app:layout_constraintBottom_toTopOf="@id/space2"
         app:layout_constraintEnd_toStartOf="@id/rightText1"
@@ -106,9 +96,7 @@
 
     <ImageView
         android:id="@+id/left"
-        style="@style/FormButton"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
+        style="@style/FormImageView"
         android:foreground="@drawable/humidity"
         app:layout_constraintBottom_toTopOf="@id/leftText1"
         app:layout_constraintEnd_toStartOf="@id/right"
@@ -118,9 +106,7 @@
 
     <TextView
         android:id="@+id/rightText"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="25"
         app:layout_constraintEnd_toStartOf="@id/image1Text"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -129,9 +115,7 @@
 
     <TextView
         android:id="@+id/rightText1"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Friday"
         app:layout_constraintBottom_toTopOf="@id/space2"
         app:layout_constraintEnd_toStartOf="@id/image1Text1"
@@ -141,10 +125,8 @@
 
     <ImageView
         android:id="@+id/right"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        style="@style/FormImageView"
         app:layout_constraintHorizontal_chainStyle="spread"
-        android:background="@color/colorAccent"
         android:foreground="@drawable/humidity"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toEndOf="@id/left"
@@ -153,9 +135,7 @@
 
     <TextView
         android:id="@+id/image1Text1"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Saturday"
         app:layout_constraintBottom_toTopOf="@id/space2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,9 +146,7 @@
 
     <TextView
         android:id="@+id/image1Text"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -177,10 +155,8 @@
 
     <ImageView
         android:id="@+id/image1"
-        style="@style/FormButton"
-        android:layout_height="75dp"
+        style="@style/FormImageView"
         app:layout_constraintHorizontal_chainStyle="spread"
-        android:background="@color/colorAccent"
         android:foreground="@drawable/humidity"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toEndOf="@id/right"
@@ -200,9 +176,7 @@
 
     <TextView
         android:id="@+id/image2Text"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="28"
         app:layout_constraintEnd_toStartOf="@id/image3Text"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -213,9 +187,7 @@
 
     <TextView
         android:id="@+id/image2Text1"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Sunday"
         app:layout_constraintEnd_toStartOf="@id/image3Text1"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -226,9 +198,7 @@
 
     <TextView
         android:id="@+id/image3Text"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="28"
         app:layout_constraintEnd_toStartOf="@id/image4Text"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -237,9 +207,7 @@
 
     <TextView
         android:id="@+id/image3Text1"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Monday"
         app:layout_constraintEnd_toStartOf="@id/image4Text1"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -250,9 +218,7 @@
 
     <ImageView
         android:id="@+id/image3"
-        style="@style/FormButton"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
+        style="@style/FormImageView"
         android:foreground="@drawable/snowy"
         app:layout_constraintBottom_toTopOf="@id/image3Text"
         app:layout_constraintEnd_toStartOf="@id/image4"
@@ -272,9 +238,7 @@
 
     <ImageView
         android:id="@+id/image2"
-        style="@style/FormButton"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
+        style="@style/FormImageView"
         android:foreground="@drawable/snowy"
         app:layout_constraintBottom_toTopOf="@id/image2Text"
         app:layout_constraintEnd_toStartOf="@id/image3"
@@ -283,9 +247,7 @@
 
     <TextView
         android:id="@+id/image4Text"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -296,9 +258,7 @@
 
     <TextView
         android:id="@+id/image4Text1"
-        style="@style/FormButton"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        style="@style/FormTextView"
         android:text="Tuesday"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -309,9 +269,7 @@
 
     <ImageView
         android:id="@+id/image4"
-        style="@style/FormButton"
-        android:layout_height="75dp"
-        android:background="@color/colorAccent"
+        style="@style/FormImageView"
         android:foreground="@drawable/snowy"
         app:layout_constraintBottom_toTopOf="@id/image4Text"
         app:layout_constraintEnd_toEndOf="parent"

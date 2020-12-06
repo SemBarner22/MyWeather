@@ -16,10 +16,61 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="FormButton">
-        <item name="android:layout_width">75dp</item>
+    <style name="Background">
+        <item name="android:background">@color/colorAccent</item>
     </style>
-    <style name="SmallButton">
+
+
+    <style name="LargeTextView" parent="Background">
+        <item name="android:layout_width">125dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="ExtraLargeTextView" parent="Background">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ExtraLargeImageView" parent="ExtraLargeTextView">
+        <item name="android:layout_height">150dp</item>
+    </style>
+
+    <style name="LargeMediumView" parent="Background">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LargeMediumImageView" parent="LargeMediumView">
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="MediumTextView" parent="Background">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Space">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="SmallTextView" parent="Background">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FormTextView" parent="Background">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FormImageView" parent="FormTextView">
+        <item name="android:layout_height">75dp</item>
+    </style>
+
+    <style name="SmallButton" parent="Background">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">50dp</item>
     </style>

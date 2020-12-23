@@ -67,101 +67,185 @@
         android:layout_height="match_parent"
         app:layout_constraintStart_toEndOf="@id/mainText" />
 
-    <TextView
-        android:id="@+id/leftText"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintEnd_toStartOf="@id/right"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/left" />
+<!--    <TextView-->
+<!--        android:id="@+id/leftText"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="25"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/right"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/left" />-->
 
 
-    <TextView
-        android:id="@+id/leftText1"
-        style="@style/FormTextView"
-        android:text="Thursday"
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/layout2"
+        app:layout_constraintStart_toEndOf="@id/space1">
+        <include layout="@layout/three_image_views">
+        </include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        app:layout_constraintBottom_toTopOf="@id/layout3"
+        app:layout_constraintStart_toEndOf="@id/space1">
+
+        <include layout="@layout/three_text_views">
+        </include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout2"
         app:layout_constraintBottom_toTopOf="@id/space2"
-        app:layout_constraintEnd_toStartOf="@id/rightText1"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/leftText" />
+        app:layout_constraintStart_toEndOf="@id/space1">
+        <include layout="@layout/three_text_views">
+
+        </include>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space2"
+        app:layout_constraintBottom_toTopOf="@id/layout22"
+        app:layout_constraintStart_toEndOf="@id/space1">
+        <include layout="@layout/three_image_views">
+        </include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout12"
+        app:layout_constraintBottom_toTopOf="@id/layout32"
+        app:layout_constraintStart_toEndOf="@id/space1">
+
+        <include layout="@layout/three_text_views">
+        </include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout22"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintStart_toEndOf="@id/space1">
+        <include layout="@layout/three_text_views">
+
+        </include>
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/leftText1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Thursday"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/space2"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/rightText1"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/leftText" />-->
 
     <View
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        app:layout_constraintTop_toBottomOf="@id/leftText1"
-        app:layout_constraintBottom_toTopOf="@id/image1Text1"/>
+        app:layout_constraintTop_toBottomOf="@id/layout3"
+        app:layout_constraintBottom_toTopOf="@id/layout12"/>
 
-    <ImageView
-        android:id="@+id/left"
-        style="@style/FormImageView"
-        android:foreground="@drawable/humidity"
-        app:layout_constraintBottom_toTopOf="@id/leftText1"
-        app:layout_constraintEnd_toStartOf="@id/right"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/left"-->
+<!--        style="@style/FormImageView"-->
+<!--        android:foreground="@drawable/humidity"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/leftText1"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/right"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbar"/>-->
 
-    <TextView
-        android:id="@+id/rightText"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintEnd_toStartOf="@id/image1Text"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/leftText"
-        app:layout_constraintTop_toBottomOf="@id/right" />
+<!--    <TextView-->
+<!--        android:id="@+id/rightText"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="25"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image1Text"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/leftText"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/right" />-->
 
-    <TextView
-        android:id="@+id/rightText1"
-        style="@style/FormTextView"
-        android:text="Friday"
-        app:layout_constraintBottom_toTopOf="@id/space2"
-        app:layout_constraintEnd_toStartOf="@id/image1Text1"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/leftText"
-        app:layout_constraintTop_toBottomOf="@id/rightText" />
+<!--    <TextView-->
+<!--        android:id="@+id/rightText1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Friday"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/space2"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image1Text1"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/leftText"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rightText" />-->
 
-    <ImageView
-        android:id="@+id/right"
-        style="@style/FormImageView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:foreground="@drawable/humidity"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintStart_toEndOf="@id/left"
-        app:layout_constraintEnd_toStartOf="@id/image1"
-        app:layout_constraintBottom_toTopOf="@id/rightText1" />
+<!--    <ImageView-->
+<!--        android:id="@+id/right"-->
+<!--        style="@style/FormImageView"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        android:foreground="@drawable/humidity"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+<!--        app:layout_constraintStart_toEndOf="@id/left"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image1"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/rightText1" />-->
 
-    <TextView
-        android:id="@+id/image1Text1"
-        style="@style/FormTextView"
-        android:text="Saturday"
-        app:layout_constraintBottom_toTopOf="@id/space2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/rightText1"
-        app:layout_constraintTop_toBottomOf="@id/image1Text" />
+<!--    <TextView-->
+<!--        android:id="@+id/image1Text1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Saturday"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/space2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/rightText1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image1Text" />-->
 
 
-    <TextView
-        android:id="@+id/image1Text"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/rightText"
-        app:layout_constraintTop_toBottomOf="@id/image1" />
+<!--    <TextView-->
+<!--        android:id="@+id/image1Text"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="25"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/rightText"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image1" />-->
 
-    <ImageView
-        android:id="@+id/image1"
-        style="@style/FormImageView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:foreground="@drawable/humidity"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintStart_toEndOf="@id/right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/image1Text1" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image1"-->
+<!--        style="@style/FormImageView"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        android:foreground="@drawable/humidity"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+<!--        app:layout_constraintStart_toEndOf="@id/right"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/image1Text1" />-->
+
+
+
+
+
+
 
 <!--    <TextView-->
 <!--        android:id="@+id/image1Text"-->
@@ -174,56 +258,56 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/image1"-->
 <!--        app:layout_constraintEnd_toStartOf="@id/image2Text"/>-->
 
-    <TextView
-        android:id="@+id/image2Text"
-        style="@style/FormTextView"
-        android:text="28"
-        app:layout_constraintEnd_toStartOf="@id/image3Text"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/image2"/>
-<!--        app:layout_constraintBottom_toTopOf="@id/image2Text1"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/image2Text"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="28"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image3Text"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image2"/>-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toTopOf="@id/image2Text1"/>&ndash;&gt;-->
 
-    <TextView
-        android:id="@+id/image2Text1"
-        style="@style/FormTextView"
-        android:text="Sunday"
-        app:layout_constraintEnd_toStartOf="@id/image3Text1"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/image2Text"
-        app:layout_constraintBottom_toTopOf="@id/bottomView" />
+<!--    <TextView-->
+<!--        android:id="@+id/image2Text1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Sunday"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image3Text1"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintVertical_bias="0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image2Text"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomView" />-->
 
-    <TextView
-        android:id="@+id/image3Text"
-        style="@style/FormTextView"
-        android:text="28"
-        app:layout_constraintEnd_toStartOf="@id/image4Text"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/image2Text"
-        app:layout_constraintTop_toBottomOf="@id/image3" />
+<!--    <TextView-->
+<!--        android:id="@+id/image3Text"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="28"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image4Text"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image2Text"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image3" />-->
 
-    <TextView
-        android:id="@+id/image3Text1"
-        style="@style/FormTextView"
-        android:text="Monday"
-        app:layout_constraintEnd_toStartOf="@id/image4Text1"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintStart_toEndOf="@id/image2Text1"
-        app:layout_constraintTop_toBottomOf="@id/image3Text"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"/>
+<!--    <TextView-->
+<!--        android:id="@+id/image3Text1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Monday"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image4Text1"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintVertical_bias="0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image2Text1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image3Text"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomView"/>-->
 
-    <ImageView
-        android:id="@+id/image3"
-        style="@style/FormImageView"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintBottom_toTopOf="@id/image3Text"
-        app:layout_constraintEnd_toStartOf="@id/image4"
-        app:layout_constraintStart_toEndOf="@id/image2"
-        app:layout_constraintTop_toBottomOf="@id/space2" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image3"-->
+<!--        style="@style/FormImageView"-->
+<!--        android:foreground="@drawable/snowy"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/image3Text"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image4"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image2"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/space2" />-->
 
 
     <!--    <TextView-->
@@ -236,45 +320,45 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/image1"-->
 <!--        app:layout_constraintEnd_toStartOf="@id/image4Text"/>-->
 
-    <ImageView
-        android:id="@+id/image2"
-        style="@style/FormImageView"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintBottom_toTopOf="@id/image2Text"
-        app:layout_constraintEnd_toStartOf="@id/image3"
-        app:layout_constraintStart_toEndOf="@id/space1"
-        app:layout_constraintTop_toBottomOf="@id/space2" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image2"-->
+<!--        style="@style/FormImageView"-->
+<!--        android:foreground="@drawable/snowy"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/image2Text"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/image3"-->
+<!--        app:layout_constraintStart_toEndOf="@id/space1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/space2" />-->
 
-    <TextView
-        android:id="@+id/image4Text"
-        style="@style/FormTextView"
-        android:text="28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/image3Text"
-        app:layout_constraintTop_toBottomOf="@id/image4" />
-<!--        app:layout_constraintBottom_toTopOf="@id/image4Text1"-->
+<!--    <TextView-->
+<!--        android:id="@+id/image4Text"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="28"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image3Text"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image4" />-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toTopOf="@id/image4Text1"&ndash;&gt;-->
 
 
-    <TextView
-        android:id="@+id/image4Text1"
-        style="@style/FormTextView"
-        android:text="Tuesday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/image3Text1"
-        app:layout_constraintTop_toBottomOf="@id/image4Text"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"
-        app:layout_constraintVertical_bias="0"/>
+<!--    <TextView-->
+<!--        android:id="@+id/image4Text1"-->
+<!--        style="@style/FormTextView"-->
+<!--        android:text="Tuesday"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image3Text1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image4Text"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomView"-->
+<!--        app:layout_constraintVertical_bias="0"/>-->
 
-    <ImageView
-        android:id="@+id/image4"
-        style="@style/FormImageView"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintBottom_toTopOf="@id/image4Text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image3"
-        app:layout_constraintTop_toBottomOf="@id/space2" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image4"-->
+<!--        style="@style/FormImageView"-->
+<!--        android:foreground="@drawable/snowy"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/image4Text"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/image3"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/space2" />-->
 
     <View
         android:id="@+id/bottomView"

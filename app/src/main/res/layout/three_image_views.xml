@@ -1,0 +1,24 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        style="@style/FormImageView"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/humidity" />
+
+    <ImageView
+        style="@style/FormImageView"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/cloudy"
+        />
+
+    <ImageView
+        style="@style/FormImageView"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="1"
+        android:foreground="@drawable/cloudy"
+        />
+
+</merge>

@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         android:layout_height="75dp"
         app:titleMarginStart="50dp"
         app:title="Weather"
@@ -25,7 +26,8 @@
         tools:ignore="MissingConstraints"
         android:layout_height="125dp"
         android:foreground="@drawable/wind"
-        app:layout_constraintBottom_toTopOf="@id/left"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@id/layout"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintVertical_bias="0.348" />
 
@@ -33,251 +35,199 @@
         android:id="@+id/mainText"
         style="@style/LargeTextView"
         android:text="30"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintBottom_toTopOf="@id/mainText1"
         app:layout_constraintTop_toBottomOf="@id/mainImage"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/mainText1"
         android:text="Wednesday"
         style="@style/LargeTextView"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         app:layout_constraintBottom_toTopOf="@id/space1"
         app:layout_constraintTop_toBottomOf="@id/mainText" />
 
     <TextView
         android:id="@+id/space1"
         style="@style/Space"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/mainText" />
-
-    <ImageView
-        android:id="@+id/left"
-        style="@style/LargeMediumImageView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:foreground="@drawable/humidity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/right"
-        app:layout_constraintTop_toBottomOf="@id/space1" />
-
-    <TextView
-        android:id="@+id/leftText"
-        style="@style/LargeMediumView"
-        android:text="28"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintEnd_toStartOf="@id/rightText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/left" />
-
-    <TextView
-        android:id="@+id/leftText1"
-        style="@style/LargeMediumView"
-        android:text="Thursday"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintEnd_toStartOf="@id/rightText1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/leftText" />
-
-    <ImageView
-        android:id="@+id/right"
-        style="@style/LargeMediumImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        android:foreground="@drawable/cloudy"
-        app:layout_constraintStart_toEndOf="@id/left"
-        app:layout_constraintTop_toBottomOf="@id/space1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintTop_toBottomOf="@id/mainText1"
+        app:layout_constraintBottom_toTopOf="@id/layout" />
 
-    <TextView
-        android:id="@+id/rightText"
-        style="@style/LargeMediumView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:text="28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/leftText"
-        app:layout_constraintTop_toBottomOf="@id/right" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space1"
+        app:layout_constraintBottom_toTopOf="@id/layout1"
+        app:layout_constraintVertical_bias="1">
 
-    <TextView
-        android:id="@+id/rightText1"
-        style="@style/LargeMediumView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:text="Friday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/leftText1"
-        app:layout_constraintTop_toBottomOf="@id/rightText" />
+        <include layout="@layout/two_image_views">
+        </include>
+
+    </LinearLayout>
+
+<!--    <include layout="@layout/layout_linear"-->
+<!--        android:id="@+id/layout1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/layout"-->
+<!--        >-->
+<!--                <include layout="@layout/two_text_views">-->
+<!--                </include>-->
+
+<!--    </include>-->
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        app:layout_constraintBottom_toTopOf="@id/layout2">
+
+        <include layout="@layout/two_text_views">
+        </include>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+
+        <include layout="@layout/two_text_views">
+        </include>
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/space"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:visibility="invisible"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rightText" />
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        app:layout_constraintBottom_toTopOf="@id/layout3"/>
 
-    <ImageView
-        android:id="@+id/image1"
-        style="@style/FormImageView"
-        android:foreground="@drawable/cloudy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/image2"
-        app:layout_constraintBottom_toTopOf="@id/image1Text"
-        app:layout_constraintTop_toBottomOf="@id/space" />
-
-    <TextView
-        android:id="@+id/image1Text"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image1"
-        app:layout_constraintEnd_toStartOf="@id/image2Text"/>
-
-    <TextView
-        android:id="@+id/image1Text1"
-        style="@style/FormTextView"
-        android:text="Saturday"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image1Text"
-        app:layout_constraintEnd_toStartOf="@id/image2Text1"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"
-        app:layout_constraintVertical_bias="0.0"/>
-
-    <ImageView
-        android:id="@+id/image2"
-        style="@style/FormImageView"
-        android:text="25"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintStart_toEndOf="@id/image1"
-        app:layout_constraintEnd_toStartOf="@id/image3"
-        app:layout_constraintTop_toBottomOf="@id/space" />
-
-    <TextView
-        android:id="@+id/image2Text"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/image1Text"
-        app:layout_constraintTop_toBottomOf="@id/image1"
-        app:layout_constraintEnd_toStartOf="@id/image3Text"/>
-
-    <TextView
-        android:id="@+id/image2Text1"
-        style="@style/FormTextView"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:text="Sunday"
-        app:layout_constraintStart_toEndOf="@id/image1Text1"
-        app:layout_constraintTop_toBottomOf="@id/image2Text"
-        app:layout_constraintEnd_toStartOf="@id/image3Text1"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"
-        app:layout_constraintVertical_bias="0.0"/>
-
-    <ImageView
-        android:id="@+id/image3"
-        style="@style/FormImageView"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintStart_toEndOf="@id/image2"
-        app:layout_constraintEnd_toStartOf="@id/image4"
-        app:layout_constraintTop_toBottomOf="@id/space" />
-
-
-    <TextView
-        android:id="@+id/image3Text"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintStart_toEndOf="@id/image2Text"
-        app:layout_constraintTop_toBottomOf="@id/image1"
-        app:layout_constraintEnd_toStartOf="@id/image4Text"/>
-
-    <TextView
-        android:id="@+id/image3Text1"
-        style="@style/FormTextView"
-        android:text="Monday"
-        app:layout_constraintStart_toEndOf="@id/image2Text1"
-        app:layout_constraintTop_toBottomOf="@id/image3Text"
-        app:layout_constraintEnd_toStartOf="@id/image4Text"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"
-        app:layout_constraintVertical_bias="0.0"/>
-
-    <ImageView
-        android:id="@+id/image4"
-        style="@style/FormImageView"
-        android:foreground="@drawable/snowy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image3"
-        app:layout_constraintTop_toBottomOf="@id/space" />
-
-    <TextView
-        android:id="@+id/image4Text"
-        style="@style/FormTextView"
-        android:text="25"
-        app:layout_constraintStart_toEndOf="@id/image3Text"
-        app:layout_constraintTop_toBottomOf="@id/image1"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/image4Text1"
-        style="@style/FormTextView"
-        android:text="Tuesday"
-        app:layout_constraintStart_toEndOf="@id/image3Text1"
-        app:layout_constraintTop_toBottomOf="@id/image4Text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomView"
-        app:layout_constraintVertical_bias="0.0"/>
-
-    <View
-        android:id="@+id/bottomView"
-        app:hideOnScroll="true"
-        style="@style/Background"
-        android:layout_height="100dp"
+    <LinearLayout
+        android:id="@+id/layout3"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/image4Text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="1"
-        tools:ignore="BottomAppBar" />
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintBottom_toTopOf="@id/layout4">
 
-    <ImageButton
-        android:id="@+id/bottomImage1"
-        style="@style/SmallButton"
-        android:foreground="@drawable/house"
-        app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintBottom_toBottomOf="@id/bottomView"
-        app:layout_constraintTop_toTopOf="@id/bottomView"
-        app:layout_constraintStart_toStartOf="@id/bottomView"
-        app:layout_constraintEnd_toStartOf="@id/bottomImage2"/>
+        <include layout="@layout/two_image_views">
+        </include>
 
-    <ImageButton
-        android:id="@+id/bottomImage2"
-        style="@style/SmallButton"
-        android:foreground="@drawable/upload"
-        android:background="@color/colorWhite"
-        app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintBottom_toBottomOf="@id/bottomView"
-        app:layout_constraintTop_toTopOf="@id/bottomView"
-        app:layout_constraintStart_toEndOf="@id/bottomImage1"
-        app:layout_constraintEnd_toStartOf="@id/bottomImage3"/>
+        <include layout="@layout/two_image_views">
+        </include>
 
-    <ImageButton
-        android:id="@+id/bottomImage3"
-        style="@style/SmallButton"
-        android:foreground="@drawable/place"
-        app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintBottom_toBottomOf="@id/bottomView"
-        app:layout_constraintTop_toTopOf="@id/bottomView"
-        app:layout_constraintStart_toEndOf="@id/bottomImage2"
-        app:layout_constraintEnd_toStartOf="@id/bottomImage4"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout3"
+        app:layout_constraintBottom_toTopOf="@id/layout5">
+
+        <include layout="@layout/two_text_views">
+        </include>
+        <include layout="@layout/two_text_views">
+        </include>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout4">
+
+        <include layout="@layout/two_text_views">
+        </include>
+        <include layout="@layout/two_text_views">
+        </include>
+
+    </LinearLayout>
+
+            <View
+                android:id="@+id/bottomView"
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                app:hideOnScroll="true"
+                style="@style/Background"
+                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintTop_toBottomOf="@id/layout5"
+                tools:ignore="BottomAppBar" />
+
+            <ImageButton
+                android:id="@+id/bottomImage1"
+                style="@style/SmallButton"
+                android:foreground="@drawable/house"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="@id/bottomView"
+                app:layout_constraintTop_toTopOf="@id/bottomView"
+                app:layout_constraintStart_toStartOf="@id/bottomView"
+                app:layout_constraintEnd_toStartOf="@id/bottomImage2"/>
+
+            <ImageButton
+                android:id="@+id/bottomImage2"
+                style="@style/SmallButton"
+                android:foreground="@drawable/upload"
+                android:background="@color/colorWhite"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="@id/bottomView"
+                app:layout_constraintTop_toTopOf="@id/bottomView"
+                app:layout_constraintStart_toEndOf="@id/bottomImage1"
+                app:layout_constraintEnd_toStartOf="@id/bottomImage3"/>
+
+            <ImageButton
+                android:id="@+id/bottomImage3"
+                style="@style/SmallButton"
+                android:foreground="@drawable/place"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="@id/bottomView"
+                app:layout_constraintTop_toTopOf="@id/bottomView"
+                app:layout_constraintStart_toEndOf="@id/bottomImage2"
+                app:layout_constraintEnd_toStartOf="@id/bottomImage4"/>
 
 
-    <ImageButton
-        android:id="@+id/bottomImage4"
-        style="@style/SmallButton"
-        android:foreground="@drawable/settings"
-        app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintBottom_toBottomOf="@id/bottomView"
-        app:layout_constraintTop_toTopOf="@id/bottomView"
-        app:layout_constraintStart_toEndOf="@id/bottomImage3"
-        app:layout_constraintEnd_toEndOf="@id/bottomView"/>
+            <ImageButton
+                android:id="@+id/bottomImage4"
+                style="@style/SmallButton"
+                android:foreground="@drawable/settings"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="@id/bottomView"
+                app:layout_constraintTop_toTopOf="@id/bottomView"
+                app:layout_constraintStart_toEndOf="@id/bottomImage3"
+                app:layout_constraintEnd_toEndOf="@id/bottomView"/>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
